@@ -118,16 +118,84 @@ nav {
   font-weight: 400;
 }
 
+/* Feature pills */
+.hero-features {
+  display: flex;
+  gap: 0.5rem;
+  margin-top: 1.5rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.feature-pill {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--color-muted);
+  background: var(--color-card);
+  border: 1px solid var(--color-border);
+  border-radius: 100px;
+  padding: 0.35rem 0.9rem;
+  box-shadow: var(--shadow-subtle);
+}
+
+/* App Store button */
 .app-store-badges {
   margin-top: 2rem;
 }
 
-.badge-link img {
-  transition: opacity 0.15s;
+.app-store-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.85rem 1.75rem;
+  background: var(--color-text);
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 600;
+  text-decoration: none;
+  border-radius: 14px;
+  transition: transform 0.15s, box-shadow 0.15s;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.12);
 }
 
-.badge-link:hover img {
-  opacity: 0.8;
+.app-store-btn:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 6px 24px rgba(0, 0, 0, 0.18);
+}
+
+.app-store-btn:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12);
+}
+
+.app-store-btn svg {
+  flex-shrink: 0;
+}
+
+/* Screenshots */
+.screenshots {
+  padding: 0 0 4rem;
+}
+
+.screenshots-track {
+  display: flex;
+  gap: 1.25rem;
+  justify-content: center;
+  padding: 0 1.5rem;
+  scrollbar-width: none;
+}
+
+.screenshots-track::-webkit-scrollbar {
+  display: none;
+}
+
+.screenshot {
+  flex-shrink: 0;
+  width: 260px;
+  border-radius: var(--radius-lg);
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.08);
+  scroll-snap-align: center;
+  border: 1px solid var(--color-border);
 }
 
 /* Main (flex child) */
@@ -414,7 +482,23 @@ footer {
   }
 
   .tagline {
-    font-size: 1.1rem;
+    font-size: 1.05rem;
+  }
+
+  .app-store-btn {
+    font-size: 0.95rem;
+    padding: 0.75rem 1.5rem;
+  }
+
+  .screenshots-track {
+    justify-content: flex-start;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    padding: 0 1.25rem;
+  }
+
+  .screenshot {
+    width: 260px;
   }
 
   .legal {
