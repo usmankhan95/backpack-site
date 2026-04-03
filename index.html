@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Backpack</title>
+  <title>Backpack — AI Document Vault</title>
   <link rel="stylesheet" href="styles.css">
   <link rel="icon" type="image/png" href="images/app-icon.png">
 </head>
@@ -23,32 +23,102 @@
   </header>
 
   <main>
+    <!-- Hero -->
     <section class="hero">
       <img src="images/app-icon.png" alt="Backpack" class="hero-icon">
-      <h1>Backpack</h1>
-      <p class="tagline">Your documents, automatically organised.<br>No accounts. No cloud. No tracking.</p>
-
-      <div class="hero-features">
-        <span class="feature-pill">On-Device AI</span>
-        <span class="feature-pill">Privacy-First</span>
-        <span class="feature-pill">Email Scanning</span>
-      </div>
-
+      <h1>Backpack: AI Document Vault</h1>
+      <p class="tagline">Stop digging through your phone for documents. Backpack organises your passports,<br>insurance, boarding passes, and more — automatically, privately, and entirely on your device.</p>
       <div class="app-store-badges">
-        <!-- Replace # with your App Store link -->
-        <a href="#" class="app-store-btn">
-          <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor" aria-hidden="true"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg>
-          Download on the App Store
-        </a>
+        <a href="#" class="app-store-btn">Coming soon to the App Store</a>
       </div>
     </section>
 
-    <section class="screenshots">
-      <div class="screenshots-track">
-        <img src="images/bg-ob-1.png" alt="Your documents are everywhere" class="screenshot">
-        <img src="images/bp-ob-2.png" alt="Just add your documents" class="screenshot">
-        <img src="images/bp-ob-3.png" alt="Your documents never leave your device" class="screenshot">
-        <img src="images/bp-ob-4.png" alt="Powered by Apple Intelligence" class="screenshot">
+    <!-- Feature Showcase -->
+    <section class="showcase">
+      <div class="showcase-inner">
+        <!-- Left: scrolling features -->
+        <div class="showcase-text">
+          <div class="showcase-feature" data-index="0">
+            <div class="showcase-label">
+              <span class="showcase-number">1</span>
+              <span class="showcase-tag">The Problem</span>
+            </div>
+            <h2>Sound familiar?<br><span class="text-muted">We've all been there</span></h2>
+            <p>That moment at the airport when you can't find your boarding pass. Scrolling through WhatsApp for a receipt. Digging through your camera roll for a photo of your insurance card. Your important documents are scattered everywhere — and they shouldn't be.</p>
+            <div class="showcase-image-mobile">
+              <img src="images/bg-ob-1.png" alt="The document chaos we all deal with" class="showcase-phone">
+            </div>
+          </div>
+
+          <div class="showcase-feature" data-index="1">
+            <div class="showcase-label">
+              <span class="showcase-number">2</span>
+              <span class="showcase-tag">Auto-Organise</span>
+            </div>
+            <h2>Drop it in,<br><span class="text-muted">forget about it</span></h2>
+            <p>Scan, import, or share a document into Backpack and it's instantly categorised — Travel, Insurance, Medical, Finance, Identity, and more. No folders to create. No tags to assign. Just add and go.</p>
+            <div class="showcase-image-mobile">
+              <img src="images/bp-ob-2.png" alt="Automatic document organisation" class="showcase-phone">
+            </div>
+          </div>
+
+          <div class="showcase-feature" data-index="2">
+            <div class="showcase-label">
+              <span class="showcase-number">3</span>
+              <span class="showcase-tag">Private &amp; Secure</span>
+            </div>
+            <h2>Completely private,<br><span class="text-muted">by design</span></h2>
+            <p>No accounts to create. No data uploaded anywhere. Everything lives on your iPhone in an encrypted container protected by iOS. Add Face ID for an extra layer of security. We never see your documents — because we can't.</p>
+            <div class="showcase-image-mobile">
+              <img src="images/bp-ob-3.png" alt="Privacy-first document storage" class="showcase-phone">
+            </div>
+          </div>
+
+          <div class="showcase-feature" data-index="3">
+            <div class="showcase-label">
+              <span class="showcase-number">4</span>
+              <span class="showcase-tag">On-Device AI</span>
+            </div>
+            <h2>Intelligent search,<br><span class="text-muted">no cloud required</span></h2>
+            <p>Ask "What's my policy number?" or "When does my visa expire?" and get an instant answer. Backpack reads, understands, and summarises your documents using Apple Intelligence — entirely on your iPhone. Nothing is ever sent to a server.</p>
+            <div class="showcase-image-mobile">
+              <img src="images/bp-ob-4.png" alt="On-device AI document search" class="showcase-phone">
+            </div>
+          </div>
+        </div>
+
+        <!-- Right: sticky screenshot -->
+        <div class="showcase-sticky">
+          <div class="showcase-image-wrap">
+            <img src="images/bg-ob-1.png" alt="" class="showcase-phone" data-index="0">
+            <img src="images/bp-ob-2.png" alt="" class="showcase-phone" data-index="1" style="opacity:0">
+            <img src="images/bp-ob-3.png" alt="" class="showcase-phone" data-index="2" style="opacity:0">
+            <img src="images/bp-ob-4.png" alt="" class="showcase-phone" data-index="3" style="opacity:0">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Email access explanation -->
+    <section class="landing-section">
+      <div class="section-inner">
+        <h2 class="section-heading">How Backpack uses email access</h2>
+        <div class="info-card">
+          <p>When you choose to connect your Gmail or Outlook account, Backpack requests read-only access to scan your inbox for document attachments like boarding passes, insurance policies, receipts, and contracts.</p>
+          <p>Backpack only downloads attachments you explicitly select. It does not read, store, or process the body of your emails. Your email credentials are never seen by Backpack — authentication is handled entirely by Google or Microsoft through their secure OAuth flows.</p>
+          <p>All downloaded documents are stored locally on your device and never uploaded to any server. You can disconnect your email at any time in Settings.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Privacy -->
+    <section class="landing-section">
+      <div class="section-inner">
+        <h2 class="section-heading">Privacy by design</h2>
+        <div class="info-card">
+          <p>Everything stays on your device. Backpack has no servers, no accounts, and no cloud storage. All AI processing runs on-device using Apple Intelligence. No personal data is collected, stored, or transmitted.</p>
+          <p>Read our full <a href="/privacy">privacy policy</a>.</p>
+        </div>
       </div>
     </section>
   </main>
@@ -58,8 +128,36 @@
       <a href="/privacy">Privacy Policy</a>
       <a href="/terms">Terms of Service</a>
       <a href="/support">Support</a>
+      <a href="mailto:usman_khan95@hotmail.co.uk">Contact</a>
     </div>
-    <p class="copyright">&copy; 2026 Backpack. All rights reserved.</p>
+    <p class="copyright">Backpack is developed by Usman Khan. &copy; 2026 Backpack. All rights reserved.</p>
   </footer>
+
+  <script>
+    (function() {
+      const features = document.querySelectorAll('.showcase-feature');
+      const images = document.querySelectorAll('.showcase-sticky .showcase-phone');
+      let active = 0;
+
+      if (!features.length || !images.length) return;
+
+      const observer = new IntersectionObserver(function(entries) {
+        entries.forEach(function(entry) {
+          if (entry.isIntersecting) {
+            const idx = parseInt(entry.target.getAttribute('data-index'), 10);
+            if (idx !== active) {
+              images[active].style.opacity = '0';
+              images[idx].style.opacity = '1';
+              active = idx;
+            }
+          }
+        });
+      }, {
+        rootMargin: '-50% 0px -50% 0px'
+      });
+
+      features.forEach(function(f) { observer.observe(f); });
+    })();
+  </script>
 </body>
 </html>
