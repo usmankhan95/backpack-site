@@ -25,20 +25,20 @@
   <main>
     <article class="legal">
       <h1>Privacy Policy</h1>
-      <p class="last-updated">Last updated: March 30, 2026</p>
+      <p class="last-updated">Last updated: April 7, 2026</p>
 
       <div class="legal-content">
         <p><strong>Backpack: AI Document Vault</strong></p>
 
         <h2>The short version</h2>
-        <p>Backpack is a privacy-first document vault. Your documents are stored on your device and never uploaded to any server. There is no account. There is no cloud storage. We never see your documents.</p>
+        <p>Backpack is a privacy-first document vault. Your documents are stored on your device and never uploaded to any server. There is no account. There is no cloud storage. We never see your documents. Backpack does not send any data to any third-party AI service — all AI processing runs entirely on your device using Apple's built-in frameworks.</p>
         <p>When you choose to connect your email, Backpack accesses your inbox with read-only permission to find documents. Attachments you select are downloaded directly to your device. Your email credentials are never seen or stored by Backpack — authentication is handled entirely by Google or Microsoft.</p>
 
         <h2>What data Backpack processes</h2>
         <p>Backpack processes the following data entirely on your device:</p>
         <p><strong>Documents you add</strong> — photos, PDFs, and files you import via the camera, photo library, file picker, or share sheet. These are stored in your device's local storage and never leave your phone.</p>
         <p><strong>Email inbox (optional)</strong> — if you choose to connect your Gmail or Outlook account during onboarding or later in Settings, Backpack requests read-only access to your inbox via OAuth authentication provided by Google or Microsoft. Backpack uses this access to scan your emails for document attachments such as boarding passes, insurance policies, receipts, and similar files. Only attachments you explicitly select are downloaded and stored locally on your device. Backpack does not read, store, or process the body of your emails. Your email credentials (username and password) are never seen by Backpack — authentication is handled entirely by Google or Microsoft through their secure OAuth flows. The OAuth access token is stored securely on your device and is never transmitted to any server. You can disconnect your email account at any time in Settings, which revokes Backpack's access and deletes the stored token.</p>
-        <p><strong>Document text</strong> — Backpack uses Apple's on-device OCR (Vision framework) and Apple's on-device AI (Foundation Models) to read, classify, and extract information from your documents. All text recognition and AI processing happens on your iPhone using Apple's built-in frameworks. No document content is ever sent to any server, cloud service, or third party.</p>
+        <p><strong>Document text</strong> — Backpack uses Apple's on-device OCR (Vision framework) and Apple's on-device AI (Foundation Models) to read, classify, and extract information from your documents. All text recognition and AI processing happens on your iPhone using Apple's built-in frameworks. No document content is ever sent to any server, cloud service, or third party. Backpack does not use any third-party AI services, APIs, or models — all intelligence is provided by Apple's on-device frameworks.</p>
         <p><strong>Location</strong> — if you grant permission, Backpack checks your approximate location when you open the app to surface relevant documents (for example, showing your passport when you're near an airport). Your location is processed once, in memory, and immediately discarded. It is never stored, logged, or transmitted.</p>
         <p><strong>Calendar events</strong> — if you grant permission, Backpack reads your upcoming calendar events to surface relevant documents (for example, showing your boarding pass before a flight). Calendar data is read on-device and never stored or transmitted.</p>
         <p><strong>Search queries and questions</strong> — anything you type into Search or Ask Backpack is processed entirely on your device using local database queries and Apple's on-device AI. Your questions are never sent anywhere.</p>
@@ -52,7 +52,7 @@
           <li>Crash reports</li>
           <li>Advertising identifiers</li>
           <li>Location history</li>
-          <li>Document contents or metadata</li>
+          <li>Document contents or metadata (processed on-device only, never transmitted or stored externally)</li>
           <li>Search history</li>
           <li>Any data whatsoever</li>
         </ul>
@@ -65,7 +65,7 @@
         <h2>Third-party services</h2>
         <p><strong>Google and Microsoft (email access)</strong> — if you connect your Gmail or Outlook account, authentication is handled by Google or Microsoft through their OAuth services. Backpack requests read-only access to your inbox. Your credentials are handled entirely by Google or Microsoft and are never seen by Backpack. You can revoke access at any time through Backpack's Settings or through your Google/Microsoft account security settings.</p>
         <p><strong>Apple App Store and StoreKit</strong> — if you purchase Backpack Pro, the transaction is processed by Apple through the App Store. Apple handles all payment information. Backpack never sees your payment details, Apple ID, or purchase receipt contents.</p>
-        <p><strong>RevenueCat</strong> — Backpack uses RevenueCat to manage in-app purchase entitlements. RevenueCat receives anonymised transaction data from Apple (not from Backpack) to verify your purchase status. RevenueCat may collect anonymous, non-personal diagnostic data such as device type and OS version to ensure purchase functionality works correctly. RevenueCat does not receive any of your document data, email content, location, calendar events, or personal information. You can review RevenueCat's privacy policy at <a href="https://www.revenuecat.com/privacy">revenuecat.com/privacy</a>.</p>
+        <p><strong>RevenueCat</strong> — Backpack uses RevenueCat to manage in-app purchase entitlements. RevenueCat receives anonymised transaction data from Apple (not from Backpack) to verify your purchase status. RevenueCat may collect anonymous, non-personal diagnostic data such as device type and OS version to ensure purchase functionality works correctly. RevenueCat does not receive any of your document data, email content, location, calendar events, or personal information. RevenueCat's privacy practices provide equal or greater protection for any data they process. You can review RevenueCat's privacy policy at <a href="https://www.revenuecat.com/privacy">revenuecat.com/privacy</a>.</p>
         <p>No other third-party services, SDKs, or APIs are used.</p>
 
         <h2>Notifications</h2>
