@@ -25,7 +25,7 @@
   <main>
     <article class="legal">
       <h1>Privacy Policy</h1>
-      <p class="last-updated">Last updated: April 7, 2026</p>
+      <p class="last-updated">Last updated: April 27, 2026</p>
 
       <div class="legal-content">
         <p><strong>Backpack: AI Document Vault</strong></p>
@@ -62,8 +62,49 @@
         <p>All data is stored locally on your device in an encrypted application container protected by iOS. When you enable biometric lock (Face ID or Touch ID), the app requires authentication before displaying any content.</p>
         <p>Your documents are included in your iCloud device backup if you have iCloud Backup enabled in iOS Settings. This is handled by Apple's backup system, not by Backpack. Backpack does not use iCloud Drive, CloudKit, or any cloud storage service.</p>
 
+        <h2>Google user data</h2>
+        <p>This section describes how Backpack handles data obtained from Google APIs (Gmail). Backpack's use and transfer of information received from Google APIs adheres to the <a href="https://developers.google.com/terms/api-services-user-data-policy">Google API Services User Data Policy</a>, including the Limited Use requirements.</p>
+
+        <p><strong>Google scopes Backpack requests.</strong> When you choose to connect your Gmail account, Backpack requests the following OAuth scope:</p>
+        <ul>
+          <li><code>https://www.googleapis.com/auth/gmail.readonly</code> — read-only access to your Gmail messages and attachments. Backpack cannot send, modify, delete, or compose email with this scope.</li>
+        </ul>
+
+        <p><strong>How Backpack uses Google user data.</strong> Backpack uses Gmail data only to find and import document attachments (such as boarding passes, insurance policies, receipts, tickets, and similar files) into your on-device document vault. Specifically:</p>
+        <ul>
+          <li>Backpack queries the Gmail API on your device to list messages that may contain document attachments.</li>
+          <li>For each candidate message, Backpack reads metadata (sender, subject, date) and the attachment list to present a list of importable documents to you.</li>
+          <li>Only when you explicitly tap to import an attachment does Backpack download that attachment from Gmail directly to your device's local storage.</li>
+          <li>Backpack does not read, store, or process the body of your emails beyond what is needed to identify and present document attachments to you for import.</li>
+          <li>Google user data is never used for advertising, never sold, never used to train AI or machine learning models, and never used for any purpose other than providing the document-import feature you have enabled.</li>
+          <li>No human at Backpack ever reads your Google user data. There are no servers operated by Backpack that receive, log, or store Google user data.</li>
+        </ul>
+
+        <p><strong>With whom Backpack shares, transfers, or discloses Google user data.</strong> Backpack does not share, transfer, or disclose your Google user data to any third party. Specifically:</p>
+        <ul>
+          <li>Google user data is not transmitted to any Backpack-operated server (Backpack does not operate any servers that process user data).</li>
+          <li>Google user data is not shared with any third-party service, SDK, analytics provider, advertising network, or AI/ML provider.</li>
+          <li>Google user data is not shared with RevenueCat, Apple, or any other vendor mentioned elsewhere in this policy.</li>
+          <li>Google user data never leaves your device, except in the form of API requests made directly from your device to Google's servers using the OAuth access token you authorised.</li>
+          <li>The only "transfer" of Google user data that occurs is the direct, encrypted communication between your device and Google's own APIs, which is required to deliver the feature you requested.</li>
+        </ul>
+
+        <p><strong>How Backpack protects Google user data.</strong> Backpack applies the following data protection mechanisms to Google user data and other sensitive data:</p>
+        <ul>
+          <li><em>Encryption in transit.</em> All communication with Google APIs uses HTTPS/TLS, as required by Google.</li>
+          <li><em>Encryption at rest.</em> The OAuth access token and refresh token issued by Google are stored in the iOS Keychain, which is hardware-encrypted by the iOS Secure Enclave and protected by your device passcode/biometrics.</li>
+          <li><em>Imported attachments</em> are stored in Backpack's iOS application container, which is sandboxed by iOS and encrypted at rest by iOS Data Protection (Complete File Protection class) whenever your device is locked.</li>
+          <li><em>Biometric lock.</em> When you enable Face ID or Touch ID inside Backpack, the app requires biometric authentication before any document content (including content imported from Gmail) can be displayed.</li>
+          <li><em>On-device processing only.</em> All parsing, OCR, classification, and AI analysis of imported documents happens on your iPhone using Apple's on-device frameworks (Vision, Foundation Models). Google user data is never sent to any third-party AI service or cloud.</li>
+          <li><em>Least privilege.</em> Backpack requests only the read-only Gmail scope and never requests broader Google account access.</li>
+          <li><em>Revocation and deletion.</em> You can disconnect your Gmail account at any time from Backpack's Settings, which deletes the stored OAuth tokens from the iOS Keychain and revokes Backpack's access via Google's revocation endpoint. You can also revoke Backpack's access at any time from your Google Account security page at <a href="https://myaccount.google.com/permissions">myaccount.google.com/permissions</a>.</li>
+          <li><em>Data minimisation.</em> Backpack does not retain copies of Gmail messages, message bodies, or attachments other than the specific attachments you choose to import.</li>
+        </ul>
+
+        <p><strong>Limited Use compliance.</strong> Backpack's use of information received from Google APIs adheres to the Google API Services User Data Policy, including the Limited Use requirements. Backpack does not use Google user data for serving advertisements; does not allow humans to read Google user data unless we have your affirmative agreement for specific messages, doing so is necessary for security purposes such as investigating abuse, to comply with applicable law, or for Backpack's internal operations and even then only when the data have been aggregated and anonymised; and does not transfer or sell Google user data to third parties for advertising, marketing, or any other purpose.</p>
+
         <h2>Third-party services</h2>
-        <p><strong>Google and Microsoft (email access)</strong> — if you connect your Gmail or Outlook account, authentication is handled by Google or Microsoft through their OAuth services. Backpack requests read-only access to your inbox. Your credentials are handled entirely by Google or Microsoft and are never seen by Backpack. You can revoke access at any time through Backpack's Settings or through your Google/Microsoft account security settings.</p>
+        <p><strong>Google and Microsoft (email access)</strong> — if you connect your Gmail or Outlook account, authentication is handled by Google or Microsoft through their OAuth services. Backpack requests read-only access to your inbox. Your credentials are handled entirely by Google or Microsoft and are never seen by Backpack. You can revoke access at any time through Backpack's Settings or through your Google/Microsoft account security settings. See the "Google user data" section above for full details on how data obtained from Google APIs is used, shared, and protected.</p>
         <p><strong>Apple App Store and StoreKit</strong> — if you purchase Backpack Pro, the transaction is processed by Apple through the App Store. Apple handles all payment information. Backpack never sees your payment details, Apple ID, or purchase receipt contents.</p>
         <p><strong>RevenueCat</strong> — Backpack uses RevenueCat to manage in-app purchase entitlements. RevenueCat receives anonymised transaction data from Apple (not from Backpack) to verify your purchase status. RevenueCat may collect anonymous, non-personal diagnostic data such as device type and OS version to ensure purchase functionality works correctly. RevenueCat does not receive any of your document data, email content, location, calendar events, or personal information. RevenueCat's privacy practices provide equal or greater protection for any data they process. You can review RevenueCat's privacy policy at <a href="https://www.revenuecat.com/privacy">revenuecat.com/privacy</a>.</p>
         <p>No other third-party services, SDKs, or APIs are used.</p>
